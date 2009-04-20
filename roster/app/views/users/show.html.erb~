@@ -1,0 +1,24 @@
+<% title "User" %>
+
+<p>
+  <strong>Netid:</strong>
+  <%=h @user.netid %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%=h @user.name %>
+</p>
+<p>
+  <strong>Comment title:</strong>
+  <%=h @user.comments.first.title %>
+</p>
+<p>
+  <strong>Comment body:</strong>
+  <%=@user.comments.first.body %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_user_path(@user) %> |
+  <%= link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", users_path %>
+</p>
