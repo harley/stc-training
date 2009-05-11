@@ -10,19 +10,22 @@
     <div id="container">
       <div id="login">
         <% if session[:cas_user] %>
-          You're logged in as <%= session[:cas_user] %>  <%= link_to "[Logout]", logout_path %> 
+          <p>
+            Hello <%= current_user.name -%>
+          </p>
+          You're logged in as <%= session[:cas_user] %>  <%= link_to "[Logout]", logout_path %>
         <% end %>
       </div>
-      
+
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
-      
+
       <%- if show_title? -%>
         <h1><%=h yield(:title) %></h1>
       <%- end -%>
-      
-      
+
+
       <%= yield %>
     </div>
   </body>
