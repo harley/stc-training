@@ -56,13 +56,13 @@ Rails::Initializer.run do |config|
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
     :session_key => '_roster_session',
-    :secret      => '3ae7fd43b68d6e21253d0062168f72b1507b83b6984574cbea2f3e63d92f07ea44545f153cf9531582c6c958c19e432a0366b4fe88ce15626485e27d77de7950'
+    :secret      => '0342984504464949d50f2f69fe105a6bafe4161c35661351dc3df7ce084da414dc815d5ff26a03ad9644bdf29d2de36ee042e6e0adfdebfc19277248581cdd25'
   }
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information
   # (create the session table with "rake db:sessions:create")
-  # config.action_controller.session_store = :active_record_store
+  config.action_controller.session_store = :active_record_store
 
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper,
@@ -73,3 +73,7 @@ Rails::Initializer.run do |config|
   # Please note that observers generated using script/generate observer need to have an _observer suffix
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 end
+
+CASClient::Frameworks::Rails::Filter.configure(
+  :cas_base_url => "https://secure.its.yale.edu/cas"
+)

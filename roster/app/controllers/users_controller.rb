@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+   
   def index
     @users = User.all
   end
@@ -41,4 +42,9 @@ class UsersController < ApplicationController
     flash[:notice] = "Successfully destroyed user."
     redirect_to users_url
   end
+
+  def logout
+    reset_session
+  end
+
 end

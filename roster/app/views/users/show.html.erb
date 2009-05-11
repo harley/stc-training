@@ -10,16 +10,18 @@
 </p>
 
 <% @user.comments.each do |c| %>
-  <p>
-    <strong>Comment title:</strong>
-    <%=c.title %>
-  </p>
-  <p>
-    <strong>Comment body:</strong>
-    <%=c.body %>
-  </p>
-<% end %>
 
+<p>
+  <strong>Comment title:</strong>
+  <%=h c.title %>
+</p>
+
+<p>
+  <strong>Comment body:</strong>
+.body %>
+</p>
+
+<% end %>
 <p>
   <%= link_to "Edit", edit_user_path(@user) %> |
   <%= link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete %> |
