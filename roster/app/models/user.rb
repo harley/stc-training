@@ -29,8 +29,7 @@ class User < ActiveRecord::Base
         end
       end
     rescue Exception => e
-      flash[:notice] = e.message
-      errors.add_to_base "LDAP Error: " + $! # Will trigger an error, LDAP is probably down
+      new_user.errors.add_to_base "LDAP Error: " + $! # Will trigger an error, LDAP is probably down
     end
     new_user.save if should_save
     new_user
