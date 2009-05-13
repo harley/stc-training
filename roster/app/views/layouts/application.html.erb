@@ -10,7 +10,9 @@
     <div id="container">
       <div id="login">
         <% if session[:cas_user] %>
-          You're logged in as <%= session[:cas_user] %>  <%= link_to "[Logout]", logout_path %> 
+          <p>
+            Hello, <%= current_user.name %>. <%= link_to "[Logout]", logout_path %> 
+          </p>
         <% end %>
       </div>
       
