@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   def self.user_options
       all.collect {|x| [x.name, x.id] }
   end
-  
+
   def self.import_from_ldap(netid, should_save = false)
     # Setup our LDAP connection
     ldap = Net::LDAP.new( :host => "directory.yale.edu", :port => 389 )
@@ -20,13 +20,12 @@ class User < ActiveRecord::Base
       ldap.open do |ldap|
         # Search, limiting results to yale domain and people
         ldap.search( :base => "ou=People,o=yale.edu", :filter => filter, :return_result => false ) do |entry|
-          print entry.to_s
+          #y entry
           new_user.name = [entry['givenname'], entry['sn']].join(" ")
         end
       end
     rescue Exception => e
-      flash[:notice] = e.message
-      errors.add_to_base "LDAP Error: " + $! # Will trigger an error, LDAP is probably down
+      new_user.errors.add_to_base "LDAP Error: " + $! # Will trigger an error, LDAP is probably down
     end
     new_user.save if should_save
     new_user
