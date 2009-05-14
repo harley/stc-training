@@ -47,5 +47,16 @@ class UsersController < ApplicationController
     CASClient::Frameworks::Rails::Filter.logout(self)
   end
 
+	def mass_add
+	end
+
+	def mass_create
+		failed = User.mass_add(params[:new_users])
+		unless failed.empty?
+			flash[:notice] = "The following users were not entered into the database: " + (failed * ", ")
+		end
+		redirect_to :action => 'index'
+	end
+
 
 end
