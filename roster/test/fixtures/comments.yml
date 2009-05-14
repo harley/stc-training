@@ -1,9 +1,0 @@
-one:
-  title: MyString
-  user_id: 1
-  body: MyText
-
-two:
-  title: MyString
-  user_id: 1
-  body: MyText
