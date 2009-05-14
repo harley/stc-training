@@ -8,5 +8,12 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
+  <% @roles.each do |role| -%>
+  <p>
+	  <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+	  <%= role.name %>
+  </p>
+  <% end %>
+  
   <p><%= f.submit "Submit" %></p>
 <% end %>
