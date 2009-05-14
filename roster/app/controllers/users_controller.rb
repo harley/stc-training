@@ -8,7 +8,9 @@ class UsersController < ApplicationController
   end
 
   def new
+    @roles = Role.all
     @user = User.new
+    @roles = Role.all
   end
 
   def create
@@ -23,9 +25,11 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @roles = Role.all
   end
 
   def update
+    params[:user][:role_ids] ||= []
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:notice] = "Successfully updated user."
