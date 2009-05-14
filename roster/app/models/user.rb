@@ -30,4 +30,18 @@ class User < ActiveRecord::Base
     new_user.save if should_save
     new_user
   end
+
+	def self.mass_add(netids)
+		netids.split(/\W+/)
+		failed = Array.new
+
+		netids.each do |n|
+			new_user = import_from_ldap(n, true)
+		#error message, hopefully
+			if user.new?
+				failed.push(user.new_record?)
+			end				
+		end
+	end
+
 end
