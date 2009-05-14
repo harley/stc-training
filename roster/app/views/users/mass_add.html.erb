@@ -1,0 +1,10 @@
+<% form_tag('mass_add') do %>
+
+<p> Here you can import a list of netIDs, separated by any non-alphanumeric characters.  Examples include spaces, newlines, or commas.
+
+  <%= text_area_tag 'new_users' %>
+
+	<%= submit_tag 'submit' %> 
+
+	<p> <%= link_to "Show All", :action => :index %></p>
+<% end %>
