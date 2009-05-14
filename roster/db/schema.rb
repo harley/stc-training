@@ -25,7 +25,11 @@ ActiveRecord::Schema.define(:version => 20090514185231) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD:roster/db/schema.rb
+  create_table "roles_users", :id => false, :force => true do |t|
+=======
   create_table "roles_users", :force => true do |t|
+>>>>>>> b05cecf10215b5e3c60ca8c2719211b914b40de5:roster/db/schema.rb
     t.integer  "role_id"
     t.integer  "user_id"
     t.datetime "created_at"
