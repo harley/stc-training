@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :roles
+
   map.resources :comments
 
   map.logout 'users/logout', :controller => "users", :action => "logout"
