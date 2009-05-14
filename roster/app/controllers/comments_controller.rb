@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  
+  # adding a comment here too - Wei
+  
   def index
     @comments = Comment.all
   end
