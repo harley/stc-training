@@ -31,3 +31,6 @@ class User < ActiveRecord::Base
     new_user
   end
 end
+
+#Where'd our massadd feature go?
+
