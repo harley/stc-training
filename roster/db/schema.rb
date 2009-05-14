@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090514185258) do
+ActiveRecord::Schema.define(:version => 20090514185231) do
 
   create_table "comments", :force => true do |t|
     t.string   "title"
@@ -25,7 +25,11 @@ ActiveRecord::Schema.define(:version => 20090514185258) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD:roster/db/schema.rb
   create_table "roles_users", :id => false, :force => true do |t|
+=======
+  create_table "roles_users", :force => true do |t|
+>>>>>>> b05cecf10215b5e3c60ca8c2719211b914b40de5:roster/db/schema.rb
     t.integer  "role_id"
     t.integer  "user_id"
     t.datetime "created_at"

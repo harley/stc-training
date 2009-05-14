@@ -1,0 +1,636 @@
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 15:37:43', '2009-05-14 15:37:43', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 15:37:43', '2009-05-14 15:37:43', 'dtt22')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 15:41:57', '2009-05-14 15:41:57', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 15:41:57', '2009-05-14 15:41:57', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 11:41:57) [GET]
+Guessed service url: "http://www.example.com/users"
+Generated login url: https://secure.its.yale.edu/cas/login?service=http%3A%2F%2Fwww.example.com%2Fusers
+Redirecting to "https://secure.its.yale.edu/cas/login?service=http%3A%2F%2Fwww.example.com%2Fusers"
+Redirected to https://secure.its.yale.edu/cas/login?service=http%3A%2F%2Fwww.example.com%2Fusers
+Filter chain halted as [CASClient::Frameworks::Rails::Filter] rendered_or_redirected.
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/users]
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 15:44:22', '2009-05-14 15:44:22', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 15:44:22', '2009-05-14 15:44:22', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 11:44:22) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 20ms (View: 9, DB: 2) | 200 OK [http://www.example.com/users]
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 15:51:28', '2009-05-14 15:51:28', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 15:51:28', '2009-05-14 15:51:28', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 11:51:28) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 20ms (View: 9, DB: 2) | 200 OK [http://www.example.com/users]
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 15:55:37', '2009-05-14 15:55:37', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 15:55:37', '2009-05-14 15:55:37', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 11:55:37) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 20ms (View: 9, DB: 2) | 200 OK [http://www.example.com/users]
+  [4;35;1mUser Delete all (0.3ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 11:55:37) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 11:55:37) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.0ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://www.example.com/users/new]
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 15:56:59', '2009-05-14 15:56:59', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 15:56:59', '2009-05-14 15:56:59', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 11:56:59) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 20ms (View: 9, DB: 2) | 200 OK [http://www.example.com/users]
+  [4;35;1mUser Delete all (0.5ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 11:56:59) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 11:56:59) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.9ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-05-14 11:56:59) [POST]
+  Parameters: {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 15:56:59', '2009-05-14 15:56:59', 'alb64')[0m
+Redirected to #<User:0x2173cb4>
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-05-14 11:56:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".user_id = 1) [0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/users/1]
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:00:48', '2009-05-14 16:00:48', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 16:00:48', '2009-05-14 16:00:48', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:00:48) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 20ms (View: 9, DB: 2) | 200 OK [http://www.example.com/users]
+  [4;35;1mUser Delete all (0.4ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:00:48) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 12:00:48) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.9ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-05-14 12:00:48) [POST]
+  Parameters: {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:00:48', '2009-05-14 16:00:48', 'alb64')[0m
+Redirected to #<User:0x2173cb4>
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-05-14 12:00:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".user_id = 1) [0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/users/1]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:01:11', '2009-05-14 16:01:11', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 16:01:11', '2009-05-14 16:01:11', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:01:11) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 20ms (View: 9, DB: 2) | 200 OK [http://www.example.com/users]
+  [4;35;1mUser Delete all (0.4ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:01:11) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 12:01:11) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.9ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-05-14 12:01:12) [POST]
+  Parameters: {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:01:12', '2009-05-14 16:01:12', 'alb64')[0m
+Redirected to #<User:0x2173cb4>
+Completed in 7ms (DB: 0) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-05-14 12:01:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".user_id = 1) [0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/users/1]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.7ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:32:48', '2009-05-14 16:32:48', 'alb64')[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:32:48', '2009-05-14 16:32:48', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 16:32:48', '2009-05-14 16:32:48', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:32:48) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 21ms (View: 9, DB: 3) | 200 OK [http://www.example.com/users]
+  [4;35;1mUser Delete all (0.4ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:32:48) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 12:32:48) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (3.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-05-14 12:32:48) [POST]
+  Parameters: {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:32:48', '2009-05-14 16:32:48', 'alb64')[0m
+Redirected to #<User:0x2542048>
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-05-14 12:32:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".user_id = 1) [0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/users/1]
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:33:36', '2009-05-14 16:33:36', 'alb64')[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:33:36', '2009-05-14 16:33:36', 'alb64')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 16:33:36', '2009-05-14 16:33:36', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:33:36) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 21ms (View: 9, DB: 3) | 200 OK [http://www.example.com/users]
+  [4;35;1mUser Delete all (0.4ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:33:36) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 12:33:36) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (3.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-05-14 12:33:36) [POST]
+  Parameters: {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:33:36', '2009-05-14 16:33:36', 'alb64')[0m
+Redirected to #<User:0x2542f70>
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-05-14 12:33:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".user_id = 1) [0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/users/1]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:40:43', '2009-05-14 16:40:43', 'alb64')[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."name" = 'Adam Bray') LIMIT 1[0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("created_at", "title", "body", "updated_at", "user_id") VALUES('2009-05-14 16:40:43', 'Good Boy', 'He writes tests for all features!', '2009-05-14 16:40:43', 1)[0m
+  [4;36;1mComment Delete all (0.4ms)[0m   [0;1mDELETE FROM "comments" WHERE 1=1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:40:43', '2009-05-14 16:40:43', 'alb64')[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 16:40:43', '2009-05-14 16:40:43', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:40:43) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 20ms (View: 9, DB: 4) | 200 OK [http://www.example.com/users]
+  [4;36;1mUser Delete all (0.4ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:40:43) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 12:40:43) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (3.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-05-14 12:40:43) [POST]
+  Parameters: {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}}
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:40:43', '2009-05-14 16:40:43', 'alb64')[0m
+Redirected to #<User:0x251ce9c>
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-05-14 12:40:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".user_id = 1) [0m
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/users/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:41:34', '2009-05-14 16:41:34', 'alb64')[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."name" = 'Adam Bray') LIMIT 1[0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("created_at", "title", "body", "updated_at", "user_id") VALUES('2009-05-14 16:41:34', 'Good Boy', 'He writes tests for all features!', '2009-05-14 16:41:34', 1)[0m
+REQUESTING PAGE: GET /comments with {} and HTTP headers {}
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-05-14 12:41:34) [GET]
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" [0m
+Rendering template within layouts/application
+Rendering comments/index
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://www.example.com/comments]
+  [4;36;1mComment Delete all (0.5ms)[0m   [0;1mDELETE FROM "comments" WHERE 1=1[0m
+REQUESTING PAGE: GET /comments with {} and HTTP headers {}
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-05-14 12:41:34) [GET]
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" [0m
+Rendering template within layouts/application
+Rendering comments/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/comments]
+REQUESTING PAGE: GET /comments/new with {} and HTTP headers {"HTTP_REFERER"=>"/comments"}
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-05-14 12:41:34) [GET]
+Rendering template within layouts/application
+Rendering comments/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered comments/_form (4.3ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://www.example.com/comments/new]
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:41:34', '2009-05-14 16:41:34', 'alb64')[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 16:41:34', '2009-05-14 16:41:34', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:41:34) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 18ms (View: 7, DB: 2) | 200 OK [http://www.example.com/users]
+  [4;36;1mUser Delete all (0.4ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:41:34) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 12:41:34) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.8ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-05-14 12:41:34) [POST]
+  Parameters: {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}}
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:41:34', '2009-05-14 16:41:34', 'alb64')[0m
+Redirected to #<User:0x248e2a0>
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-05-14 12:41:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".user_id = 1) [0m
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/users/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:47:53', '2009-05-14 16:47:53', 'alb64')[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."name" = 'Adam Bray') LIMIT 1[0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("created_at", "title", "body", "updated_at", "user_id") VALUES('2009-05-14 16:47:53', 'Good Boy', 'He writes tests for all features!', '2009-05-14 16:47:53', 1)[0m
+REQUESTING PAGE: GET /comments with {} and HTTP headers {}
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-05-14 12:47:53) [GET]
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" [0m
+Rendering template within layouts/application
+Rendering comments/index
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://www.example.com/comments]
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:47:53', '2009-05-14 16:47:53', 'alb64')[0m
+  [4;36;1mComment Delete all (0.2ms)[0m   [0;1mDELETE FROM "comments" WHERE 1=1[0m
+REQUESTING PAGE: GET /comments with {} and HTTP headers {}
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-05-14 12:47:53) [GET]
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" [0m
+Rendering template within layouts/application
+Rendering comments/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/comments]
+REQUESTING PAGE: GET /comments/new with {} and HTTP headers {"HTTP_REFERER"=>"/comments"}
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-05-14 12:47:53) [GET]
+Rendering template within layouts/application
+Rendering comments/new
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered comments/_form (6.5ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://www.example.com/comments/new]
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:47:53', '2009-05-14 16:47:53', 'alb64')[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 16:47:53', '2009-05-14 16:47:53', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:47:53) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://www.example.com/users]
+  [4;36;1mUser Delete all (0.4ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:47:53) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 12:47:53) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.8ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-05-14 12:47:53) [POST]
+  Parameters: {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}}
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:47:53', '2009-05-14 16:47:53', 'alb64')[0m
+Redirected to #<User:0x246ac9c>
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-05-14 12:47:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".user_id = 1) [0m
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/users/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.7ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:54:55', '2009-05-14 16:54:55', 'alb64')[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."name" = 'Adam Bray') LIMIT 1[0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("created_at", "title", "body", "updated_at", "user_id") VALUES('2009-05-14 16:54:55', 'Good Boy', 'He writes tests for all features!', '2009-05-14 16:54:55', 1)[0m
+REQUESTING PAGE: GET /comments with {} and HTTP headers {}
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-05-14 12:54:55) [GET]
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" [0m
+Rendering template within layouts/application
+Rendering comments/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 28ms (View: 17, DB: 2) | 200 OK [http://www.example.com/comments]
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 16:54:55', '2009-05-14 16:54:55', 'dtt22')[0m
+  [4;36;1mComment Delete all (0.2ms)[0m   [0;1mDELETE FROM "comments" WHERE 1=1[0m
+REQUESTING PAGE: GET /comments with {} and HTTP headers {}
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-05-14 12:54:55) [GET]
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" [0m
+Rendering template within layouts/application
+Rendering comments/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/comments]
+REQUESTING PAGE: GET /comments/new with {} and HTTP headers {"HTTP_REFERER"=>"/comments"}
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-05-14 12:54:55) [GET]
+Rendering template within layouts/application
+Rendering comments/new
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered comments/_form (5.7ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://www.example.com/comments/new]
+REQUESTING PAGE: POST /comments with {"comment"=>{"body"=>"He never writes tests", "title"=>"Bad Boy", "user_id"=>"1"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/comments/new"}
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-05-14 12:54:55) [POST]
+  Parameters: {"comment"=>{"title"=>"Bad Boy", "body"=>"He never writes tests", "user_id"=>"1"}, "commit"=>"Create"}
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("created_at", "title", "body", "updated_at", "user_id") VALUES('2009-05-14 16:54:55', 'Bad Boy', 'He never writes tests', '2009-05-14 16:54:55', 1)[0m
+Redirected to #<Comment:0x24f2318>
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/comments]
+REQUESTING PAGE: GET http://www.example.com/comments/1 with {} and HTTP headers {"HTTP_REFERER"=>"/comments"}
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-05-14 12:54:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/show
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/comments/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:54:55', '2009-05-14 16:54:55', 'alb64')[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'dtt22') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Harley Trung', '2009-05-14 16:54:55', '2009-05-14 16:54:55', 'dtt22')[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:54:55) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://www.example.com/users]
+  [4;36;1mUser Delete all (0.4ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+REQUESTING PAGE: GET /users with {} and HTTP headers {}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-05-14 12:54:55) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/users]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-05-14 12:54:55) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.9ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-05-14 12:54:55) [POST]
+  Parameters: {"commit"=>"Create", "user"=>{"name"=>"Adam Bray", "netid"=>"alb64"}}
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."netid" = 'alb64') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "netid") VALUES('Adam Bray', '2009-05-14 16:54:55', '2009-05-14 16:54:55', 'alb64')[0m
+Redirected to #<User:0x23ca990>
+Completed in 7ms (DB: 0) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-05-14 12:54:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".user_id = 1) [0m
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/users/1]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
