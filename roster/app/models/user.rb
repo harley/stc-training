@@ -2,6 +2,8 @@ require 'net/ldap'
 
 class User < ActiveRecord::Base
   has_many :comments
+  has_and_belongs_to_many :roles
+
   validates_presence_of :name
   validates_presence_of :netid
   validates_uniqueness_of :netid

@@ -9,12 +9,13 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @roles = Role.all
   end
 
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:notice] = "Successfully created user."
+      flash[:notice] = "New User Created."
       redirect_to @user
     else
       render :action => 'new'
@@ -23,9 +24,11 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @roles = Role.all
   end
 
   def update
+    params[:user][:role_ids] ||= []
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:notice] = "Successfully updated user."
