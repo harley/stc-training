@@ -2,9 +2,11 @@ require 'net/ldap'
 
 class User < ActiveRecord::Base
   has_many :comments
+	has_and_belongs_to_many :roles
   validates_presence_of :name
   validates_presence_of :netid
   validates_uniqueness_of :netid
+	validates_presence_of :roles
 
   def self.user_options
       all.collect {|x| [x.name, x.id] }

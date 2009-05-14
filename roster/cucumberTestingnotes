@@ -1,0 +1,95 @@
+To get Cucumber on Ubuntu:
+sudo gem install cucumber rspec rspec-rails 
+sudo apt-get install libxml2-dev libxslt-dev
+sudo gem install webrat
+
+
+
+ruby script/generate cucumber
+
+create manage_users.feature in "features" folder
+	Feature: Manage Users
+	In order to make a roster
+	As an administrator
+	I want to create and manage users
+
+	Scenario: User List
+		Given I have a user named Adam Bray, netid alb64
+		And I have a user named Harley Trung, netid dtt22
+		When I go to the list of users
+		Then I should see "Adam Bray"
+		And I should see "Harley Trung"
+
+Terminal: cucumber features 
+
+(or) cucumber features -n User List
+
+Errors we ran into : 
+error: Given /^I have a user named Adam Bray, netid alb64$/ do
+  pending
+end
+
+Solution: change features/step_definitions/user_steps: 
+"Given /^I have a user named (.*), netid (.+)$/ do |name, netid|
+	User.create!(:name => name, :netid => netid)
+end"
+
+Error: expected the following element's content to include "Adam Bray":
+      You are being redirected. (Spec::Expectations::ExpectationNotMetError)
+
+Solution: change features/support/paths.rb to add: 
+"		when /the list of users/
+			users_path"
+
+Yay, it works
+
+
+Now add another scenario: 
+
+	Scenario: Create valid user
+		Given I have no users
+		And I am on the list of users
+		When I follow "New User"
+		And I fill in "Name" with "Adam Bray"
+		And I fill in "Netid" with "alb64"
+		And I press "Create"
+		Then I should see "New User Created."
+		And I should see "Adam Bray"
+		And I should see "alb64"
+		And I should have 1 user
+
+Errors: 
+Given /^I have no users$/ do
+  pending
+end
+
+Then /^I should have 1 user$/ do
+  pending
+end
+
+Solution: add to user_steps.rb
+Given /^I have no users$/ do
+  User.delete_all
+end
+
+Then /^I should have ([0-9]+) user$/ do |count|          
+  User.count.should == count.to_i
+end
+
+Error: Could not find button "Create" (Webrat::NotFoundError)
+      (eval):2:in `/^I press "([^\"]*)"$/'
+      features/manage_users.feature:20:in `And I press "Create"'
+
+Solution: change button to say "Create" in _form.html.erb
+
+Error: Then I should see "New User Created." # features/step_definitions/webrat_steps.rb:93
+      expected the following element's content to include "New User Created.":
+      User
+              Successfully created user.
+
+Solution: change the flash text in users_controller to say "New User Created."
+
+
+
+
+
