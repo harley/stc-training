@@ -15,4 +15,3 @@ end
 
 require 'cucumber/rails/rspec'
 require 'webrat/core/matchers'
-#require File.expand_path(File.dirname(__FILE__) + '/../step_definitions/common_steps.rb')

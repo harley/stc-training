@@ -25,3 +25,13 @@ Feature: Manage Comments
     And I should see "Bad Boy"
     And I should see "He never writes tests"
     And I should have 1 comment
+    
+  @cas
+  Scenario: Log into CAS
+    Given I am logged into CAS
+    Given I have a user named Adam Bray, netid alb64
+    Given I have a comment about Adam Bray, with title Good Boy, and with body He writes tests for all features!
+    When I go to the list of comments                   
+    Then I should see "Adam Bray"                       
+    And I should see "Good Boy"                         
+    And I should see "He writes tests for all features!"
