@@ -81,21 +81,24 @@ a {
 }
 
 #navbar {
-  float: right
-  background: #f0f0f0 ;
+  float: left;
   padding-top: 10px;
   padding-bottom: 10px;
   font: small-caps 12px/12px;
-  color: #282 ;
+  color: #FFFFFF ;
   width: 100px;
   height: 100%;
 }
 
-#shade-list .even {
-    background: #D3D3D3
+#navbar a {
+  color: white;
 }
 
 #shade-list .odd {
+    background: #D3D3D3
+}
+
+#shade-list .even {
     background: #FFFFFF
 }
 
