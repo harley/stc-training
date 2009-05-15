@@ -26,7 +26,6 @@ end
 
 Given /^I am logged in as "([^\"]*)"$/ do |arg1|
   @current_user = User.find_by_netid arg1
-  puts @current_user.is_admin?
 end
 
 When /^I visit profile for "([^\"]*)"$/ do |arg1|
