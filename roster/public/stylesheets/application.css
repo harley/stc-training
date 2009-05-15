@@ -79,3 +79,16 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+
+.odd {
+	background-color:#ccccff;
+	}
+	
+.even {
+	background-color:white;
+	}
+
+.gridless{
+	border:0;
+	border-spacing:0;
+}

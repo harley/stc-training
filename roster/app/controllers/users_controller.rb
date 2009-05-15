@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.all.sort_by{ |user| user.name}
   end
 
   def show
