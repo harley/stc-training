@@ -1,3 +1,7 @@
+*~
+log/*
+tmp/**/*
+roster/log/*
 db/*.sqlite3
 tmp/cache/*
 tmp/pids/*
@@ -6,3 +10,4 @@ tmp/sockets/*
 log/*.log
 doc/*
 db/schema.rb
+
