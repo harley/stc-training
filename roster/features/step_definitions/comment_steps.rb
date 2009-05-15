@@ -1,6 +1,4 @@
-require 'casclient'
-require 'casclient/frameworks/rails/filter'
-
-Given /^I have a comment about (.+), with title (.+), and with body (.+)$/ do |user_name, title, body|
-  Comment.create!(:user_id => User.find_by_name(user_name).id, :title => title, :body => body)
+Given /^I have a comment titled (.+), with body (.+) and user (.+)$/ do |title, body, user_name|
+  user = User.find_by_name(user_name)
+  Comment.create!(:title => title, :body => body, :user_id => user.id)
 end

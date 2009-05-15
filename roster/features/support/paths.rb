@@ -20,7 +20,6 @@ module NavigationHelpers
       users_path
     when /the list of comments/
       comments_path
-
     
     # Add more page name => path mappings here
     
