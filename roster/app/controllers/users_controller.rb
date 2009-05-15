@@ -18,6 +18,7 @@ class UsersController < ApplicationController
       flash[:notice] = "New User Created."
       redirect_to @user
     else
+      @roles = Role.all
       render :action => 'new'
     end
   end
