@@ -1,20 +1,22 @@
 <h1>Listing roles</h1>
 
-<table>
+<div id="shade-list">
+<table cellspacing=0 cellpadding =4>
   <tr>
     <th>Name</th>
   </tr>
 
 <% for role in @roles %>
-  <tr>
-    <td><%=h role.name %></td>
-    <td><%= link_to 'Show', role %></td>
+  <tr class= "<%= cycle("even", "odd") %>">
+    <td><%= link_to role.name, role %></td>
     <td><%= link_to 'Edit', edit_role_path(role) %></td>
-    <td><%= link_to 'Destroy', role, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', role, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+</div>
 
 <br />
 
 <%= link_to 'New role', new_role_path %>
+

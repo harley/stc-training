@@ -79,3 +79,21 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+
+#navbar {
+  background: #f0f0f0 ;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 12px/12px;
+  color: #282 ;
+}
+
+#shade-list .even {
+    background: #D3D3D3
+}
+
+#shade-list .odd {
+    background: #FFFFFF
+}
+
