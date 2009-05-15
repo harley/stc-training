@@ -23,8 +23,8 @@ a {
   margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;
-  border: solid 1px black;
   margin-top: 20px;
+  height 100%;
 }
 
 #flash_notice, #flash_error {
@@ -79,3 +79,26 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+
+#navbar {
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font: small-caps 12px/12px;
+  color: #FFFFFF ;
+  width: 100px;
+  height: 100%;
+}
+
+#navbar a {
+  color: white;
+}
+
+#shade-list .odd {
+    background: #D3D3D3
+}
+
+#shade-list .even {
+    background: #FFFFFF
+}
+

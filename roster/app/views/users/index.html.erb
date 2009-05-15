@@ -1,21 +1,18 @@
 <% title "Users" %>
-
-<table>
-  <tr>
-    <th>Netid</th>
+<p><%= link_to "New User", new_user_path %> <%= link_to "Mass Add Users", :action => :mass_add %></p>
+<div id="shade-list">
+<table cellspacing=0 cellpadding =4>
+    <tr>
     <th>Name</th>
   </tr>
   <% for user in @users %>
-    <tr>
-      <td><%=h user.netid %></td>
-      <td><%=h user.name %></td>
-      <td><%= link_to "Show", user %></td>
+    <tr class= "<%= cycle("even", "odd") %>">
+      <td><%= link_to user.name, user %></td>
       <td><%= link_to "Edit", edit_user_path(user) %></td>
-      <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Delete", user, :confirm => 'Are you sure?', :method => :delete %></td>
 	  <td><%= link_to "Comments", Comment %></td>
     </tr>
   <% end %>
 </table>
+</div>
 
-<p><%= link_to "New User", new_user_path %></p>
-<p><%= link_to "Mass Add Users", :action => :mass_add %></p>
