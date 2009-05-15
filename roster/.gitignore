@@ -1,13 +1,11 @@
 *~
 log/*
 tmp/**/*
-roster/log/*
 db/*.sqlite3
 tmp/cache/*
 tmp/pids/*
 tmp/sessions/*
 tmp/sockets/*
-log/*.log
 doc/*
 db/schema.rb
 
