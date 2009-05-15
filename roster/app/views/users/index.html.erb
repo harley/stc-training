@@ -1,16 +1,21 @@
 <% title "Users" %>
-<p><%= link_to "New User", new_user_path %>&nbsp&nbsp&nbsp<%= link_to "Mass Add Users", :action => :mass_add %></p>
+
+<div id="main">
+
 <table class = "gridless">
   <tr align='left'>
     <th>Name</th>
   </tr>
+  
   <% for user in @users %>
     <tr class="<%= cycle("even", "odd") %>">
-      <td><%= link_to "#{user.name}", user %></td>
-      <td><%= link_to "Edit", edit_user_path(user) %></td>
-      <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
-	    <td><%= link_to "Comments", Comment %></td>
+     <td><%= link_to "#{user.name}", user %></td>
+     <td><%= link_to "Edit", edit_user_path(user) %></td>
+     <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+	   <td><%= link_to "Comments", Comment %></td>
     </tr>
   <% end %>
 </table>
+
+</div>
 

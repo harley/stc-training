@@ -80,6 +80,23 @@ a {
   list-style: disc;
 }
 
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 10%;
+  width: 12em;
+  background: #CCCCFF;
+}
+
+#main {
+  margin-left: 13em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  padding-bottom: 2%;
+  background: white;
+}
+
 .odd {
 	background-color:#ccccff;
 	}
