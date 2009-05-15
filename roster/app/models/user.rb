@@ -3,15 +3,18 @@ require 'net/ldap'
 class User < ActiveRecord::Base
   has_many :comments
 	has_and_belongs_to_many :roles
+  before_validation :check_role
+
   validates_presence_of :name
   validates_presence_of :netid
   validates_uniqueness_of :netid
 	validates_presence_of :roles
 
+
   def self.user_options
       all.collect {|x| [x.name, x.id]}
   end
-  
+
   def self.import_from_ldap(netid, should_save = false)
     # Setup our LDAP connection
     ldap = Net::LDAP.new( :host => "directory.yale.edu", :port => 389 )
@@ -34,12 +37,12 @@ class User < ActiveRecord::Base
     rescue Exception => e
       flash[:notice] = "Failed to add user: " + e.message
       errors.add_to_base "LDAP Error: " + $! # Will trigger an error, LDAP is probably down
-      return 
+      return
     else
       new_user
     end
   end
-  
+
   def self.mass_add (netids)
     netids = netids.split(/\W+/)
     errors = Array.new
@@ -54,16 +57,22 @@ class User < ActiveRecord::Base
   end
 
 	def self.mass_add(netids)
-		netids.split(/\W+/)
-		failed = Array.new
+		failed = []
 
-		netids.each do |n|
-			new_user = import_from_ldap(n, true)
+		netids.split(/\W+/).each do |n|
+			user = import_from_ldap(n, true)
 		#error message, hopefully
-			if user.new?
-				failed.push(user.new_record?)
-			end				
+			if user.new_record?
+				failed << "From netid #{user.netid}: #{user.errors.full_messages.to_sentence}"
+			end
 		end
+
+		failed
 	end
 
+  private
+
+  def check_role
+    self.roles << Role.find_by_name("guest") if roles.empty?
+  end
 end
