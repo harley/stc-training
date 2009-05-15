@@ -1,7 +1,6 @@
 *~
 log/*
 tmp/**/*
-db/*.sqlite3
 roster/log/*
 db/*.sqlite3
 tmp/cache/*

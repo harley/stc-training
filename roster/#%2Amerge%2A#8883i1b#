@@ -1,8 +1,0 @@
-*~
-log/*
-tmp/**/*
-db/*.sqlite3
-roster/log/*
-doc/*
-db/schema.rb
-
