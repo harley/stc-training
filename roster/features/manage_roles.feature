@@ -3,6 +3,7 @@ Feature: Manage Users By Role
   In order to manage user details
   As a security enthusiast
   I want to edit my comment only when authorized
+  Note: Cannot test this yet because I dont know how to test with CAS on yet
 
   Scenario Outline: Show or hide edit comment link
     Given the following user records
@@ -15,7 +16,4 @@ Feature: Manage Users By Role
 
     Examples:
       | current_user | another_user | action                 |
-      | dtt22        | alb64        | not see "Add comment"  |
-      | alb64        | dtt22        | see "Add comment"      |
-      | dtt22        | dtt22        | see "Add comment"      |
 

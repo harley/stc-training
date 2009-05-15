@@ -2,14 +2,14 @@ require 'net/ldap'
 
 class User < ActiveRecord::Base
   has_many :comments
-	has_and_belongs_to_many :roles
+  has_and_belongs_to_many :roles
 
   before_validation :check_role
 
   validates_presence_of :name
   validates_presence_of :netid
   validates_uniqueness_of :netid
-	validates_presence_of :roles
+  validates_presence_of :roles
 
   def self.user_options
       all.collect {|x| [x.name, x.id]}
@@ -35,19 +35,24 @@ class User < ActiveRecord::Base
     new_user
   end
 
-	def self.mass_add(netids)
-		failed = []
+  def self.mass_add(netids)
+    failed = []
 
-		netids.split(/\W+/).each do |n|
-			user = import_from_ldap(n, true)
-		  #error message, hopefully
-			if user.new_record?
-				failed << "From netid #{user.netid}: #{user.errors.full_messages.to_sentence}"
-			end
-		end
+    netids.split(/\W+/).each do |n|
+      user = import_from_ldap(n, true)
+      #error message, hopefully
+      if user.new_record?
+        failed << "From netid #{user.netid}: #{user.errors.full_messages.to_sentence}"
+      end
+    end
 
-		failed
-	end
+    failed
+  end
+
+  def is_admin?
+#    y self
+    roles.collect(&:name).include?("admin")
+  end
 
   private
 
@@ -56,3 +61,4 @@ class User < ActiveRecord::Base
     self.roles << guest if roles.empty?
   end
 end
+
