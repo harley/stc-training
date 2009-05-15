@@ -3,7 +3,7 @@ require 'net/ldap'
 class User < ActiveRecord::Base
   has_many :comments
 	has_and_belongs_to_many :roles
-  
+
   before_validation :check_role
 
   validates_presence_of :name
@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
 
 	def self.mass_add(netids)
 		failed = []
-		
+
 		netids.split(/\W+/).each do |n|
 			user = import_from_ldap(n, true)
 		  #error message, hopefully
@@ -52,6 +52,7 @@ class User < ActiveRecord::Base
   private
 
   def check_role
-    self.roles << Role.find_by_name("guest") if roles.empty?
+    guest = Role.find_by_name("guest") || Role.create!(:name=>"guest")
+    self.roles << guest if roles.empty?
   end
 end
