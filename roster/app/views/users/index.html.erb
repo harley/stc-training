@@ -1,18 +1,17 @@
 <% title "Users" %>
-
 <div id="main">
-  <table>
-    <tr>
-      <th>Name</th>
 
+<table class = "gridless">
+  <tr align='left'>
+    <th>Name</th>
+  </tr>
+  <% for user in @users %>
+    <tr class="<%= cycle("even", "odd") %>">
+      <td><%= link_to "#{user.name}", user %></td>
+      <td><%= link_to "Edit", edit_user_path(user) %></td>
+      <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+	    <td><%= link_to "Comments", Comment %></td>
     </tr>
-    <% for user in @users %>
-      <tr>
-        <td><%= link_to user.name, user %></td>
-        <td><%= link_to "Edit", edit_user_path(user) %></td>
-        <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
-    	  <td><%= link_to "Comments", comments_path %></td>
-      </tr>
     <% end %>
   </table>
 </div>

@@ -80,8 +80,6 @@ a {
   list-style: disc;
 }
 
-/* Main Page edits */
-
 #side {
   float: left;
   padding-top: 1em;
@@ -98,4 +96,15 @@ a {
   background: white;
 }
 
+.odd {
+	background-color:#ccccff;
+	}
+	
+.even {
+	background-color:white;
+	}
 
+.gridless{
+	border:0;
+	border-spacing:0;
+}
