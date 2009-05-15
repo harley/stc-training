@@ -12,10 +12,10 @@
       <td><%= link_to "Show", user %></td>
       <td><%= link_to "Edit", edit_user_path(user) %></td>
       <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+	  <td><%= link_to "Comments", Comment %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New User", new_user_path %>
-<br />
-<%= link_to "Mass Add Users", :action => 'mass_add' %></p>
+<p><%= link_to "New User", new_user_path %></p>
+<p><%= link_to "Mass Add Users", :action => :mass_add %></p>
