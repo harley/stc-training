@@ -8,19 +8,12 @@
   </head>
   <body>
 
- <table>
- <tr>
-  <td>
-  <div id="navbar">
+ <div id="navbar">
     <p><%= link_to "Users", users_path %></p>
     <p><%= link_to "Comments", comments_path %></p>
     <p><%= link_to "Roles", roles_path %></p>
   </div>
-  <td>
-
-
-  <td>
-  <div id="container">
+ <div id="container">
     <% if @current_user %>
       <div id="login">
       <p>Hello <%= @current_user.name %>!</p>
@@ -37,9 +30,6 @@
 
       <%= yield %>
   </div>
-  <td>
-  </tr>
-  </table>
   </body>
 </html>
 
