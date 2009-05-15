@@ -1,21 +1,22 @@
 <% title "Users" %>
 
-<table>
-  <tr>
-    <th>Netid</th>
-    <th>Name</th>
-  </tr>
-  <% for user in @users %>
-    <tr>
-      <td><%=h user.netid %></td>
-      <td><%=h user.name %></td>
-      <td><%= link_to "Show", user %></td>
-      <td><%= link_to "Edit", edit_user_path(user) %></td>
-      <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
-	  <td><%= link_to "Comments", Comment %></td>
-    </tr>
-  <% end %>
-</table>
+<p><%= link_to "New User", new_user_path %> &nbsp &nbsp &nbsp &nbsp
+   <%= link_to "Mass Add Users", :action => :mass_add %></p>
 
-<p><%= link_to "New User", new_user_path %></p>
-<p><%= link_to "Mass Add Users", :action => :mass_add %></p>
+<div id="main">
+  <table>
+    <tr>
+      <th>Name</th>
+
+    </tr>
+    <% for user in @users %>
+      <tr>
+        <td><%= link_to user.name, user %></td>
+        <td><%= link_to "Edit", edit_user_path(user) %></td>
+        <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+    	  <td><%= link_to "Comments", comments_path %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+

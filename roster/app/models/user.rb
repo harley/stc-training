@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 	validates_presence_of :roles
 
   def self.user_options
-      all.collect {|x| [x.name, x.id]}
+		all.collect{|x| [x.name, x.id]}
   end
 
   def self.import_from_ldap(netid, should_save = false)
