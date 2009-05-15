@@ -1,5 +1,5 @@
 db/*.sqlite3
 tmp/*
-log/*
+log/*.log
 doc/*
 db/schema.rb
