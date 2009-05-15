@@ -30,17 +30,14 @@ class User < ActiveRecord::Base
       end
       new_user.save if should_save
     rescue Exception => e
-      flash[:notice] = "Failed to add user: " + e.message
-      errors.add_to_base "LDAP Error: " + $! # Will trigger an error, LDAP is probably down
-      return
-    else
-      new_user
+      new_user.errors.add_to_base "LDAP Error #{e.message}" # Will trigger an error, LDAP is probably down
     end
+    new_user
   end
 
 	def self.mass_add(netids)
 		failed = []
-
+		
 		netids.split(/\W+/).each do |n|
 			user = import_from_ldap(n, true)
 		  #error message, hopefully
