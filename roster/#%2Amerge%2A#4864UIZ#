@@ -1,0 +1,7 @@
+*~
+tmp/*
+db/*.sqlite3
+roster/log/*
+log/*
+doc/*
+

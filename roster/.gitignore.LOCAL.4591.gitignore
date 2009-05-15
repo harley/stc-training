@@ -1,0 +1,14 @@
+<<<<<<< HEAD:roster/.gitignore
+*~
+log/*.log
+tmp/**/*
+doc/api
+doc/app
+db/*.sqlite3
+roster/log/*
+=======
+db/*.sqlite3
+tmp/*
+log/*
+doc/*
+>>>>>>> 44c0df27da69a70a02fa6ebe43b2749341b9838b:roster/.gitignore
