@@ -7,8 +7,8 @@ Feature: Manage Users By Role
   Scenario Outline: Show or hide edit comment link
     Given the following user records
       | netid | role     | comment  |
-      | dtt22 | admin    | funny    |
-      | alb64 | guest    | not funny|
+      | dtt22 | guest    | funny    |
+      | alb64 | admin    | not funny|
     Given I am logged in as "<current_user>"
     When I visit profile for "<another_user>"
     Then I should <action>

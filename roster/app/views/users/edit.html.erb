@@ -1,8 +1,13 @@
 <% title "Edit User" %>
-
 <%= render :partial => 'form' %>
 
 <p>
+  <p>content</p>
+  <% if current_user.is_admin? -%>
+    <% raise current_user -%>
+    <%= link_to "Add comment" %>
+  <% end -%>
   <%= link_to "Show", @user %> |
   <%= link_to "View All", users_path %>
 </p>
+
