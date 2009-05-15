@@ -3,13 +3,13 @@ require 'net/ldap'
 class User < ActiveRecord::Base
   has_many :comments
 	has_and_belongs_to_many :roles
+  
   before_validation :check_role
 
   validates_presence_of :name
   validates_presence_of :netid
   validates_uniqueness_of :netid
 	validates_presence_of :roles
-
 
   def self.user_options
       all.collect {|x| [x.name, x.id]}
@@ -25,12 +25,7 @@ class User < ActiveRecord::Base
       ldap.open do |ldap|
         # Search, limiting results to yale domain and people
         ldap.search(:base => "ou=People,o=yale.edu", :filter => filter, :return_result => false) do |entry|
-          # y entry
           new_user.name = [entry['givenname'], entry['sn']].join(" ")
-          # self.email = "#{entry['mail']}"
-          # self.college = entry['college'].first
-          # self.phone = entry['studentphonenumber'].first
-          # self.class_year = entry['class'].first
         end
       end
       new_user.save if should_save
@@ -43,25 +38,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  def self.mass_add (netids)
-    netids = netids.split(/\W+/)
-    errors = Array.new
-    begin
-      netids.each do |n|
-        user = import_from_ldap(n, true)
-        errors << user.netid if user.new_record?
-      end
-    rescue Exception => e
-    end
-    errors
-  end
-
 	def self.mass_add(netids)
 		failed = []
 
 		netids.split(/\W+/).each do |n|
 			user = import_from_ldap(n, true)
-		#error message, hopefully
+		  #error message, hopefully
 			if user.new_record?
 				failed << "From netid #{user.netid}: #{user.errors.full_messages.to_sentence}"
 			end

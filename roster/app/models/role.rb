@@ -4,7 +4,5 @@ class Role < ActiveRecord::Base
   def self.user_options
       all.collect {|r| [r.name, r.id] }
   end
-
-
-
+  
 end

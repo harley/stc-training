@@ -2,7 +2,7 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-#  before_filter CASClient::Frameworks::Rails::Filter
+  #before_filter CASClient::Frameworks::Rails::Filter
   helper_method :current_user
   helper :all
 
