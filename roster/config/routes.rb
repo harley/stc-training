@@ -1,8 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :roles
+
   map.resources :comments
 
-  map.logout 'logout', :controller => 'users', :action => 'logout'
 
+  map.logout 'logout', :controller => 'users', :action => 'logout'
   map.resources :users, :collection => {:mass_add => :get, :mass_create => :post}
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -9,12 +9,13 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
+		@roles = Role.all
   end
   
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:notice] = "New user created."
+      flash[:notice] = "New User Created."
       redirect_to @user
     else
       render :action => 'new'
@@ -23,6 +24,7 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
+		@roles = Role.all
   end
   
   def mass_add
@@ -37,6 +39,9 @@ class UsersController < ApplicationController
   end
   
   def update
+		# to make it update when you uncheck all roles on the form
+		params[:user][:role_ids] ||= []
+
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:notice] = "Successfully updated user."
@@ -57,4 +62,15 @@ class UsersController < ApplicationController
     reset_session
     CASClient::Frameworks::Rails::Filter.logout(self)
   end
+
+  def mass_add
+	end
+
+	def mass_create
+		failed = User.mass_add(params[:new_users])
+		unless failed.empty?
+			flash[:notice] = "The following users were not entered into the database: " + (failed * ", ")
+		end
+		redirect_to :action => 'index'
+	end
 end

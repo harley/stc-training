@@ -2,9 +2,11 @@ require 'net/ldap'
 
 class User < ActiveRecord::Base
   has_many :comments
+	has_and_belongs_to_many :roles
   validates_presence_of :name
   validates_presence_of :netid
   validates_uniqueness_of :netid
+	validates_presence_of :roles
 
   def self.user_options
       all.collect {|x| [x.name, x.id]}
@@ -50,4 +52,18 @@ class User < ActiveRecord::Base
     end
     errors
   end
+
+	def self.mass_add(netids)
+		netids.split(/\W+/)
+		failed = Array.new
+
+		netids.each do |n|
+			new_user = import_from_ldap(n, true)
+		#error message, hopefully
+			if user.new?
+				failed.push(user.new_record?)
+			end				
+		end
+	end
+
 end
