@@ -5,9 +5,13 @@
   <title>Roster</title>
     <%= stylesheet_link_tag "application.css" , :media => "all" %>
   </head>
-
+  
 <body id="store">
-   <div id="side">
+  <div id="banner">
+    <p><%= link_to "New User", new_user_path %> &nbsp &nbsp &nbsp &nbsp
+     <%= link_to "Mass Add Users", :action => :mass_add %></p>
+  </div>
+ <div id="side">
     <%= link_to "Roles", roles_path %><br />
     <%= link_to "Comments", comments_path %><br />
    </div>
