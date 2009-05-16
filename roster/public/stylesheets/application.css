@@ -84,19 +84,22 @@ a {
   float: left;
   padding-top: 1em;
   padding-left: 1em;
-  padding-bottom: 10%;
+  padding-bottom: 1%;
   width: 12em;
   background: #CCCCFF;
 }
 
 #main {
   margin-left: 13em;
-  padding-top: 4ex;
-  padding-left: 2em;
+  padding-top: 1%;
+  padding-left: 1%;
   padding-bottom: 2%;
   background: white;
 }
 
+#mid a {
+  }
+  
 .odd {
 	background-color:#ccccff;
 	}
