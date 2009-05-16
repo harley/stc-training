@@ -1,5 +1,5 @@
-<% title "New Comment" %>
+<% title "New Comment For #{@user.name}" %>
 
 <%= render :partial => 'form' %>
 
-<p><%= link_to "Back to List", comments_path %></p>
+<p><%= link_to "Back to List", user_comments_path(@user) %></p>

@@ -1,12 +1,8 @@
-<% form_for @comment do |f| %>
+<% form_for [@user,@comment] do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.select :user_id, User.user_options %>
   </p>
   <p>
     <%= f.label :body %><br />

@@ -8,20 +8,25 @@
   <strong>Name:</strong>
   <%=h @user.name %>
 </p>
-
-<% @user.comments.each do |c| %>
-
 <p>
-  <strong>Comment title:</strong>
-  <%=h c.title %>
+  <%= link_to "Add Comment", new_user_comment_path(@user) %>
 </p>
 
-<p>
-  <strong>Comment body:</strong>
-  <%=h c.body %>
-</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  <% for comment in @user.comments %>
+    <tr>
+      <td><%= link_to comment.title, user_comment_path(@user, comment) %></td>
+      <td><%=h comment.body %></td>
+      <td><%= link_to "Edit", edit_user_comment_path(@user, comment) %></td>
+      <td><%= link_to "Destroy", [@user,comment], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
 
-<% end %>
 <p>
   <%= link_to "Edit", edit_user_path(@user) %> |
   <%= link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete %> |
