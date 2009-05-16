@@ -98,14 +98,15 @@ a {
 }
 
 .odd {
-	background-color:#ccccff;
-	}
-	
+  background-color:#ccccff;
+  }
+
 .even {
-	background-color:white;
-	}
+  background-color:white;
+  }
 
 .gridless{
-	border:0;
-	border-spacing:0;
+  border:0;
+  border-spacing:0;
 }
+

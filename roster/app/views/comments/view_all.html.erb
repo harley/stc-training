@@ -1,0 +1,20 @@
+<% title "Comments for All Users" %>
+
+<table class = "gridless">
+  <tr>
+    <th>User</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  <% for comment in @comments %>
+    <%= @user = comment.user %>
+    <tr class="<%= cycle("even", "odd") %>">
+      <td><%= comment.user.name %></td>
+      <td><%= link_to comment.title, [comment.user, comment] %></td>
+      <td><%=h comment.body %></td>
+      <td><%= link_to "Edit", edit_user_comment_path(comment.user, comment) %></td>
+      <td><%= link_to "Destroy", [comment.user, comment], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
