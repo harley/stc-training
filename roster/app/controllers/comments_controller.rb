@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
+  before_filter :load_user
+
   def index
-    @comments = Comment.all
+    @comments = @user.comments
   end
 
   def show
@@ -8,14 +10,16 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comment.new
+    @comment = @user.comments.build
   end
 
   def create
-    @comment = Comment.new(params[:comment])
+    @comment = @user.comments.build(params[:comment])
+#    params[:comment][:user_id] = params[:user_id]
+#    @comment = Comment.new(params[:comment])
     if @comment.save
       flash[:notice] = "New comment created."
-      redirect_to @comment
+      redirect_to user_comments_path(@user)
     else
       render :action => 'new'
     end
@@ -36,9 +40,16 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
+    @comment = @user.comments.find(params[:id])
     @comment.destroy
     flash[:notice] = "Successfully destroyed comment."
     redirect_to comments_url
   end
+
+private
+  
+  def load_user
+    @user ||= User.find params[:user_id]
+  end
+
 end

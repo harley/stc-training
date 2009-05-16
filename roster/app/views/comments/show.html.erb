@@ -18,7 +18,7 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_comment_path(@comment) %> |
-  <%= link_to "Destroy", @comment, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", comments_path %>
+  <%= link_to "Edit", edit_user_comment_path(@user,@comment) %> |
+  <%= link_to "Destroy", [@user,@comment], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", user_comments_path(@user) %>
 </p>

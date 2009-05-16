@@ -1,20 +1,18 @@
-<% title "Comments" %>
+<% title "Comments for #{@user.name}" %>
 
-<table>
+<table class = "gridless">
   <tr>
-    <th>User</th>
     <th>Title</th>
     <th>Body</th>
   </tr>
   <% for comment in @comments %>
-    <tr>
-      <td><%= link_to comment.user.name, comment.user %></td>
+    <tr class="<%= cycle("even", "odd") %>">
       <td><%= link_to comment.title, comment %></td>
       <td><%=h comment.body %></td>
-      <td><%= link_to "Edit", edit_comment_path(comment) %></td>
-      <td><%= link_to "Destroy", comment, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Edit", edit_user_comment_path(@user,comment) %></td>
+      <td><%= link_to "Destroy", [@user,comment], :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Comment", new_comment_path %></p>
+<p><%= link_to "New Comment", new_user_comment_path %></p>
