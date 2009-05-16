@@ -5,8 +5,7 @@ class CommentsController < ApplicationController
     if @user
       @comments = @user.comments
     else
-      @comments = Comment.all
-      render(:action => 'view_all') and return
+      @comments = Comment.all.sort_by{|c| c.user.name}
     end
   end
 

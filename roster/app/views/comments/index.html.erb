@@ -1,19 +1,31 @@
-<% title "Comments for #{@user.name}" %>
+<% title "Comments for #{@user ? @user.name : 'All Users'}" %>
+
+<% if @user -%>
+  <p><%= link_to "View All Comments", comments_path %></p>
+<% end -%>
 
 <table class = "gridless">
   <tr>
+    <% if @user.nil? -%>
+      <th>User</th>
+    <% end -%>
     <th>Title</th>
     <th>Body</th>
   </tr>
-  <% for comment in @comments %>
-    <tr class="<%= cycle("even", "odd") %>">
-      <td><%= link_to comment.title, [comment.user, comment] %></td>
-      <td><%=h comment.body %></td>
-      <td><%= link_to "Edit", edit_user_comment_path(comment.user, comment) %></td>
-      <td><%= link_to "Destroy", [comment.user, comment], :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
 
-<p><%= link_to "New Comment", new_user_comment_path %></p>
+  <% for comment in @comments %>
+
+  <tr class="<%= cycle("even", "odd") %>">
+    <% if @user.nil? -%>
+      <td><%= link_to comment.user.name, user_comments_path(comment.user) %></td>
+    <% end -%>
+    <td><%= link_to comment.title, [comment.user, comment] %></td>
+    <td><%=h comment.body %></td>
+    <td><%= link_to "Edit", edit_user_comment_path(comment.user, comment) %></td>
+    <td><%= link_to "Destroy", [comment.user, comment], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+
+  <% end %>
+
+</table>
 
