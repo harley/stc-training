@@ -10,7 +10,7 @@
 </p>
 
 <%= link_to "Add Comment", new_user_comment_path(@user) %>
-<% @user.comments.each do |c| %>
+
 
 <table>
   <tr>
@@ -27,7 +27,6 @@
   <% end %>
 </table>
 
-<% end %>
 <p>
   <%= link_to "Edit", edit_user_path(@user) %> |
   <%= link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete %> |

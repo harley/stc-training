@@ -2,7 +2,12 @@ class CommentsController < ApplicationController
   before_filter :load_user
 
   def index
-    @comments = @user.comments
+    if @user
+      @comments = @user.comments
+    else
+      @comments = Comment.all
+      render(:action => 'view_all') and return
+    end
   end
 
   def show
@@ -33,7 +38,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     if @comment.update_attributes(params[:comment])
       flash[:notice] = "Successfully updated comment."
-      redirect_to @comment
+      redirect_to [@user,@comment]
     else
       render :action => 'edit'
     end
@@ -47,9 +52,10 @@ class CommentsController < ApplicationController
   end
 
 private
-  
+
   def load_user
-    @user ||= User.find params[:user_id]
+    @user ||= User.find_by_id params[:user_id]
   end
 
 end
+
