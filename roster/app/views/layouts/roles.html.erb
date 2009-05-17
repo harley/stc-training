@@ -1,0 +1,18 @@
+<%= stylesheet 'roles' %>
+
+<% content_for :my_content do %>
+    <div id="nav_bar">
+      <ul>
+        <li><%= link_to "New Role", new_role_path %></li>
+        <li><%= link_to "All Roles", roles_path %></li>
+      <ul>
+    </div>  
+
+    <div id="roles_content">
+      <%= yield %>
+    </div>
+
+    <div id="roles_clear"></div>
+<% end  %>
+  
+<%= render :file => 'layouts/application.html.erb' %>
