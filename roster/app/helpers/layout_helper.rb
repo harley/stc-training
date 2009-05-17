@@ -8,6 +8,14 @@ module LayoutHelper
     @show_title = show_title
   end
   
+  def tab(str)
+    if str == controller.controller_name
+      "current_tab"
+    else
+      "tab"
+    end
+  end
+  
   def show_title?
     @show_title
   end

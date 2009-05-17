@@ -2,9 +2,13 @@ class CommentsController < ApplicationController
   before_filter :load_user
 
   def index
-    @comments = @user.comments
+    if @user
+      @comments = @user.comments
+    else
+      @comments = Comment.all.sort_by { |c| c.user.name }
+    end
   end
-
+  
   def show
     @comment = Comment.find(params[:id])
   end
@@ -47,7 +51,7 @@ class CommentsController < ApplicationController
   private 
   
   def load_user
-    @user ||= User.find params[:user_id]
+    @user ||= User.find_by_id params[:user_id]
   end
 
 end

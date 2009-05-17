@@ -1,0 +1,19 @@
+<%= stylesheet 'users' %>
+
+<% content_for :my_content do %>
+    <div id="nav_bar">
+      <ul>
+        <li><%= link_to "New User", new_user_path %></li>
+        <li><%= link_to "Mass Add", mass_add_users_path %></li>
+        <li><%= link_to "All Users", users_path %></li>
+      <ul>
+    </div>  
+
+    <div id="users_content">
+      <%= yield %>
+    </div>
+
+    <div id="users_clear"></div>
+<% end  %>
+  
+<%= render :file => 'layouts/application.html.erb' %>

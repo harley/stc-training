@@ -7,13 +7,16 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
+
+    <%= render :file => 'layouts/nav_top' %>
 	  <% if @current_user %>
 	    <div id="login">
 		  <p>Hello <%= @current_user.name %>!</p>
 	      You are logged in as <%= @current_user.netid %> <%= link_to "[Logout]", logout_path %>  
 	  	</div>	
 	  <% end %>
+    
+    <div id="container">
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
@@ -22,7 +25,7 @@
         <h1><%=h yield(:title) %></h1>
       <%- end -%>
       
-      <%= yield %>
+      <%= yield(:my_content) || yield %>
     </div>
   </body>
 </html>
