@@ -10,6 +10,7 @@ div #nav_bar{
 
 a{
 	color: blue;
+	text-decoration: none;
 }
 a:hover{
 	color: orange;
@@ -19,7 +20,13 @@ div #users_content{
 	float: right;
 	width: 70%;
 }
-
 div #users_clear{
 	clear:both;
+}
+
+tr.list-line-odd{
+	background: #fff;
+}
+tr.list-line-even{
+	background: #bbb;
 }

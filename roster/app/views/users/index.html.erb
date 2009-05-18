@@ -5,7 +5,7 @@
     <th>Name</th>
   </tr>
   <% for user in @users %>
-    <tr>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
       <td><%= link_to h(user.name), user_path(user) %></td>
       <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
